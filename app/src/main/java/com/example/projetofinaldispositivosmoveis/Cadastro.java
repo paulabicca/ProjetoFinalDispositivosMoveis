@@ -1,4 +1,4 @@
-package com.example.trabalho_android;
+package com.example.projetofinaldispositivosmoveis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.trabalho_android;
+package com.example.projetofinaldispositivosmoveis;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
