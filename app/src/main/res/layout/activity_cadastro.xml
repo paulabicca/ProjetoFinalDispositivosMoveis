@@ -12,7 +12,7 @@
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Nome do animal"
         android:inputType="textPersonName"
@@ -65,10 +65,10 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <EditText
         android:id="@+id/etTelefone"
@@ -97,8 +97,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Peso"
         android:inputType="textPersonName"
-        android:text="Peso"
         app:layout_constraintBottom_toTopOf="@+id/etTelefone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etIdadeAnimal2"
@@ -114,7 +114,6 @@
         android:ems="10"
         android:hint="Raça"
         android:inputType="textPersonName"
-        android:text="Raça"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,8 +127,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="36dp"
         android:ems="10"
+        android:hint="Tipo de animal"
         android:inputType="textPersonName"
-        android:text="Tipo de animal"
         app:layout_constraintStart_toEndOf="@+id/etRaca"
         app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
 
@@ -141,7 +140,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="96dp"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,10 +156,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Informações sobre remédios, cirurgias e alergias"
         android:inputType="textPersonName"
-        android:text="Informações sobre remédios, cirurgias e alergias"
         app:layout_constraintBottom_toTopOf="@+id/btSalvar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal" />
+        app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal"
+        app:layout_constraintVertical_bias="0.215" />
 
 </android.support.constraint.ConstraintLayout>
