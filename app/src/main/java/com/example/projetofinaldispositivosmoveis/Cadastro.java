@@ -7,11 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Cadastro extends AppCompatActivity {
 
     private EditText etNomeAnimal, etDonoAnimal, etIdadeAnimal2, etTelefone, etPeso, etRaca, etTipoAnimal, etInformacoes;
     private Button btSalvar;
+
+
+    private FirebaseDatabase database;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +40,33 @@ public class Cadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 salvar();
+
             }
         });
 
     }
 
     private void salvar(){
-        String nomeAnimal = etNomeAnimal.getText().toString();
-        String donoAnimal = etDonoAnimal.getText().toString();
-        String idadeAnimal = etIdadeAnimal2.getText().toString();
-        String telefone = etTelefone.getText().toString();
-        String peso = etPeso.getText().toString();
-        String raca = etRaca.getText().toString();
-        String tipoAnimal = etTipoAnimal.getText().toString();
-        String informacoes = etInformacoes.getText().toString();
+        if(etNomeAnimal.length() == 0 || etDonoAnimal.length() == 0 ||  etIdadeAnimal2.length() == 0 ||
+                etTelefone.length() == 0  ||  etPeso.length()== 0 ||  etRaca.length() == 0 || etTipoAnimal.length() == 0 ||
+                etInformacoes.length() == 0){
+            Toast.makeText(this, "Você precisa preencher todos os campos!", Toast.LENGTH_LONG).show();
+        }else{
+            limparCampos();
+            Toast.makeText(this, "Campos preenchidos", Toast.LENGTH_SHORT).show();
+        }
     }
 
+    private void limparCampos(){
+        etNomeAnimal.setText("");
+        etDonoAnimal.setText("");
+        etIdadeAnimal2.setText("");
+        etTelefone.setText("");
+        etPeso.setText("");
+        etRaca.setText("");
+        etTipoAnimal.setText("");
+        etInformacoes.setText("");
+
+    }
 
 }
