@@ -40,10 +40,8 @@ public class Cadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 salvar();
-
             }
         });
-
     }
 
     private void salvar(){
@@ -52,6 +50,18 @@ public class Cadastro extends AppCompatActivity {
                 etInformacoes.length() == 0){
             Toast.makeText(this, "Você precisa preencher todos os campos!", Toast.LENGTH_LONG).show();
         }else{
+            Guia novaguia = new Guia();
+            novaguia.setNomeAnimal(etNomeAnimal.getText().toString().trim());
+            novaguia.setDonoNome(etDonoAnimal.getText().toString().trim());
+            novaguia.setIdadeAnimal(etIdadeAnimal2.getText().toString().trim());
+            novaguia.setTelefoneDono(etTelefone.getText().toString().trim());
+            novaguia.setPesoAnimal(etPeso.getText().toString().trim());
+            novaguia.setRacaAnimal(etRaca.getText().toString().trim());
+            novaguia.setTipoAnimal(etTipoAnimal.getText().toString().trim());
+            novaguia.setObservacaoAnimal(etInformacoes.getText().toString().trim());
+            database = FirebaseDatabase.getInstance();
+            reference = database.getReference();
+            reference.child("guias").push().setValue(novaguia);
             limparCampos();
             Toast.makeText(this, "Campos preenchidos", Toast.LENGTH_SHORT).show();
         }
@@ -66,7 +76,6 @@ public class Cadastro extends AppCompatActivity {
         etRaca.setText("");
         etTipoAnimal.setText("");
         etInformacoes.setText("");
-
     }
 
 }
