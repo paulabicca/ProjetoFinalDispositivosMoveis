@@ -1,5 +1,6 @@
 package com.example.projetofinaldispositivosmoveis;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Cadastro extends AppCompatActivity {
 
     private EditText etNomeAnimal, etDonoAnimal, etIdadeAnimal2, etTelefone, etPeso, etRaca, etTipoAnimal, etInformacoes;
-    private Button btSalvar;
+    private Button btSalvar,btnEscolher;
 
 
     private FirebaseDatabase database;
@@ -35,7 +36,7 @@ public class Cadastro extends AppCompatActivity {
         etTipoAnimal = (EditText) findViewById(R.id.etTipoAnimal);
         etInformacoes = (EditText) findViewById(R.id.etInformacoes);
         btSalvar = (Button) findViewById(R.id.btSalvar);
-
+        btnEscolher = (Button)findViewById(R.id.btnEscolher);
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +65,12 @@ public class Cadastro extends AppCompatActivity {
             reference.child("guias").push().setValue(novaguia);
             limparCampos();
             Toast.makeText(this, "Campos preenchidos", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent( Cadastro.this, Cadastro.class);
+            startActivity(intent);
+
+
+
         }
     }
 
