@@ -49,18 +49,20 @@
 
     <TextView
         android:id="@+id/tvTituloEdicao"
-        android:layout_width="289dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="clip_vertical|center_horizontal"
         android:text="Edição de Guia"
         android:textColor="#3F51B5"
         android:textSize="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/btFavorito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="43dp" />
+        tools:layout_editor_absoluteY="54dp" />
 
     <EditText
         android:id="@+id/etTelefoneEdicao"
@@ -154,19 +156,5 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btSalvarEdicao"
         tools:layout_editor_absoluteX="9dp" />
-
-    <ImageButton
-        android:id="@+id/btFavorito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/etNomeAnimalEdicao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
-        app:srcCompat="@android:drawable/star_big_on" />
 
 </android.support.constraint.ConstraintLayout>

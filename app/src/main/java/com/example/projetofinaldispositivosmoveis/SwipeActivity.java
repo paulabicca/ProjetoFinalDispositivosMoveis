@@ -20,7 +20,7 @@ public class SwipeActivity extends AppCompatActivity {
         btnEscolher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(SwipeActivity.this, Cadastro.class);
+               // Intent intent = new Intent(SwipeActivity.this, GuiaConsulta.class);
                 //startActivity(intent);
             }
         });
