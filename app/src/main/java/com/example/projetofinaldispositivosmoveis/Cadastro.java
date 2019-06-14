@@ -64,12 +64,10 @@ public class Cadastro extends AppCompatActivity {
             reference = database.getReference();
             reference.child("guias").push().setValue(novaguia);
             limparCampos();
-            Toast.makeText(this, "Campos preenchidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Dados salvos com sucesso!", Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent( Cadastro.this, Cadastro.class);
+            Intent intent = new Intent( Cadastro.this, SwipeActivity.class);
             startActivity(intent);
-
-
 
         }
     }

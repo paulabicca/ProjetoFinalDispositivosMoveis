@@ -1,4 +1,4 @@
-package com.example.projeto;
+package com.example.projetofinaldispositivosmoveis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ public class ListaFavoritos extends AppCompatActivity {
         setContentView(R.layout.activity_lista_favoritos);
     }
 
-    lvLista = (ListView) findViewById(R.id.lvFavoritos);
+    //lvLista = (ListView) findViewById(R.id.lvFavoritos);
 
 
     /*adaptar codigo para inserir as informações do firebase
@@ -51,7 +51,7 @@ public class ListaFavoritos extends AppCompatActivity {
         @Override
         protected void onResume() {
             super.onResume();
-            carregarLista();
+            //carregarLista();
         }
 
 }

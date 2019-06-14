@@ -1,4 +1,4 @@
-package com.example.projeto;
+package com.example.projetofinaldispositivosmoveis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,12 +29,12 @@ public class EdicaoCadastro extends AppCompatActivity {
         btSalvarEdicao = (Button) findViewById(R.id.btSalvarEdicao);
     }
 
-    btSalvarEdicao.setOnClickListener(new View.OnClickListener() {
+    /*btSalvarEdicao.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             salvar();
         }
-    });
+    });*/
 
     private void salvar(){
         String nomeAnimalEdicao = etNomeAnimalEdicao.getText().toString();
