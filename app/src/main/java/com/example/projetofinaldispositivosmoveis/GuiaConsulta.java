@@ -11,11 +11,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Collection;
+import java.util.List;
+
 public class GuiaConsulta extends AppCompatActivity {
 
     private EditText etNomeAnimalConsulta, etDonoAnimalConsulta, etIdadeAnimal2Consulta, etTelefoneConsulta, etPesoConsulta, etRacaConsulta, etTipoAnimalConsulta, etInformacoesConsulta;
     private Button btEditar;
     private ImageButton btFavoritoConsulta;
+    List<Guia> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,7 @@ public class GuiaConsulta extends AppCompatActivity {
 
         btEditar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick() {
+            public void onClick(View v) {
                 Intent intent = new Intent(GuiaConsulta.this, EdicaoCadastro.class);
                 startActivity(intent);
             }
