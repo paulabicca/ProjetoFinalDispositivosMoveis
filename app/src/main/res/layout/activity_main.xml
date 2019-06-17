@@ -28,21 +28,20 @@
         android:layout_width="362dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Você ainda não tem guias!"
+        android:textAlignment="center"
         android:textColor="#3F51B5"
-        android:textSize="30dp"
+        android:textSize="25dp"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCachorro"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btCadastro"

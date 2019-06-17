@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuiaConsulta">
+
+    <EditText
+        android:id="@+id/etNomeAnimalConsulta"
+        android:layout_width="324dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Nome do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etIdadeAnimal2Consulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etDonoAnimalConsulta"
+        android:layout_width="144dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Dono do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etRacaConsulta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etIdadeAnimal2Consulta"
+        android:layout_width="146dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Idade do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etPesoConsulta"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/tvTituloConsulta"
+        android:layout_width="219dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="clip_vertical|center_horizontal"
+        android:text="Consulta de Guia"
+        android:textColor="#3F51B5"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/etNomeAnimalConsulta"
+        app:layout_constraintEnd_toStartOf="@+id/btFavorito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <EditText
+        android:id="@+id/etTelefoneConsulta"
+        android:layout_width="146dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/etTipoAnimalConsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/etDonoAnimalConsulta" />
+
+    <EditText
+        android:id="@+id/etPesoConsulta"
+        android:layout_width="154dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Peso"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <EditText
+        android:id="@+id/etRacaConsulta"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="Raça"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <EditText
+        android:id="@+id/etTipoAnimalConsulta"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Tipo de animal"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etInformacoesConsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/etRacaConsulta" />
+
+    <Button
+        android:id="@+id/btEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etInformacoesConsulta"
+        android:layout_width="331dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Informações sobre remédios, cirurgias e alergias"
+        android:inputType="textPersonName"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <ImageButton
+        android:id="@+id/btFavoritoConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/etNomeAnimalConsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloConsulta"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@android:drawable/star_big_on" />
+
+</android.support.constraint.ConstraintLayout>
