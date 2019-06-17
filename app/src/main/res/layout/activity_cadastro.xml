@@ -7,6 +7,7 @@
     tools:context=".Cadastro">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -258,19 +259,162 @@
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+=======
+    <EditText
+        android:id="@+id/etNomeAnimal"
+        android:layout_width="378dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Nome do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloCadastro" />
+
+    <EditText
+        android:id="@+id/etDonoAnimal"
+        android:layout_width="174dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Dono do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdadeAnimal2" />
+
+    <EditText
+        android:id="@+id/etIdadeAnimal2"
+        android:layout_width="175dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Idade do animal"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeAnimal" />
+
+    <TextView
+        android:id="@+id/tvTituloCadastro"
+        android:layout_width="416dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="clip_vertical|center_horizontal"
+        android:text="Cadastro de Guia"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <EditText
+        android:id="@+id/etTelefone"
+        android:layout_width="173dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toEndOf="@+id/etDonoAnimal"
+        app:layout_constraintTop_toBottomOf="@+id/etIdadeAnimal2" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Peso"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etTelefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etIdadeAnimal2"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeAnimal" />
+
+    <EditText
+        android:id="@+id/etRaca"
+        android:layout_width="173dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Raça"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDonoAnimal" />
+
+    <EditText
+        android:id="@+id/etTipoAnimal"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Tipo de animal"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/etRaca"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="96dp"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+>>>>>>> parent of 3af957e... reajuste de layuot
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etInformacoes"
+<<<<<<< HEAD
         android:layout_width="311dp"
         android:layout_height="104dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+=======
+        android:layout_width="392dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+>>>>>>> parent of 3af957e... reajuste de layuot
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Informações sobre remédios, cirurgias e alergias"
         android:inputType="textPersonName"
+<<<<<<< HEAD
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/btSalvar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -279,5 +423,11 @@
         app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal"
         app:layout_constraintVertical_bias="0.666" />
 >>>>>>> 1bce828019291ac339f7efd16ac2f8e93667c49f
+=======
+        app:layout_constraintBottom_toTopOf="@+id/btSalvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal"
+        app:layout_constraintVertical_bias="0.215" />
+>>>>>>> parent of 3af957e... reajuste de layuot
 
 </android.support.constraint.ConstraintLayout>
