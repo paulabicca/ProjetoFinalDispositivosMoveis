@@ -1,433 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Cadastro">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tvTituloEdicao"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:gravity="clip_vertical|center_horizontal"
+        android:text="Edição de Guia"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvTituloCadastro"
-                    android:layout_width="291dp"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="clip_vertical|center_horizontal"
-                    android:text="Cadastro de Guia"
-                    android:textAlignment="center"
-                    android:textColor="#3F51B5"
-                    android:textSize="30dp" />
+    <EditText
+        android:id="@+id/etNomeAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Nome do animal"
+        android:inputType="textPersonName" />
 
-            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/etNomeAnimal"
-                android:layout_width="323dp"
-                android:layout_height="47dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="36dp"
+                android:id="@+id/etIdadeAnimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Nome do animal"
-                android:inputType="textPersonName"/>
-
-            <EditText
-                android:id="@+id/etDonoAnimal"
-                android:layout_width="169dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="16dp"
-                android:ems="10"
-                android:hint="Dono do animal"
+                android:gravity="center_horizontal"
+                android:hint="Idade do animal"
                 android:inputType="textPersonName" />
+        </LinearLayout>
 
-            <EditText
-                android:id="@+id/etIdadeAnimal2"
-                android:layout_width="159dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="28dp"
-                android:ems="10"
-                android:hint="Idade do animal" />
-
-
-            <EditText
-                android:id="@+id/etTelefone"
-                android:layout_width="146dp"
-                android:layout_height="42dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
-                android:hint="Telefone"
-                android:inputType="phone" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/etPeso"
-                android:layout_width="133dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Peso"
+                android:gravity="center_horizontal"
+                android:hint="Peso do animal"
                 android:inputType="textPersonName" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etDonoAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="Dono do animal"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="Telefone"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/etRaca"
-                android:layout_width="171dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="44dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="Raça"
                 android:inputType="textPersonName" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
             <EditText
                 android:id="@+id/etTipoAnimal"
-                android:layout_width="150dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="Tipo de animal"
                 android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/etInformacoes"
-                android:layout_width="311dp"
-                android:layout_height="104dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:ems="10"
-                android:hint="Informações sobre remédios, cirurgias e alergias"
-                android:inputType="textPersonName"
-                android:textSize="14dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etInformacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Informações sobre remédios, cirurgias e alergias"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/btSalvar"
+                android:id="@+id/btnSalvar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="48dp"
                 android:text="Salvar" />
 
 
         </LinearLayout>
 
-
     </LinearLayout>
 
 
-=======
-    <EditText
-        android:id="@+id/etNomeAnimal"
-        android:layout_width="323dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="Nome do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etPeso"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/etDonoAnimal"
-        android:layout_width="169dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="Dono do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etRaca"
-        app:layout_constraintEnd_toStartOf="@+id/etTelefone"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etIdadeAnimal2"
-        android:layout_width="159dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
-        android:hint="Idade do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etDonoAnimal"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tvTituloCadastro"
-        android:layout_width="291dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="clip_vertical|center_horizontal"
-        android:text="Cadastro de Guia"
-        android:textAlignment="center"
-        android:textColor="#3F51B5"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/etNomeAnimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
-
-    <EditText
-        android:id="@+id/etTelefone"
-        android:layout_width="146dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Telefone"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/etTipoAnimal"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/etPeso"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Peso"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etTelefone"
-        app:layout_constraintStart_toEndOf="@+id/etIdadeAnimal2" />
-
-    <EditText
-        android:id="@+id/etRaca"
-        android:layout_width="171dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="44dp"
-        android:ems="10"
-        android:hint="Raça"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etInformacoes"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etTipoAnimal"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Tipo de animal"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/etRaca"
-        tools:layout_editor_absoluteY="325dp" />
-
-    <Button
-        android:id="@+id/btSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="48dp"
-        android:text="Salvar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-=======
-    <EditText
-        android:id="@+id/etNomeAnimal"
-        android:layout_width="378dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="Nome do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloCadastro" />
-
-    <EditText
-        android:id="@+id/etDonoAnimal"
-        android:layout_width="174dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Dono do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIdadeAnimal2" />
-
-    <EditText
-        android:id="@+id/etIdadeAnimal2"
-        android:layout_width="175dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="Idade do animal"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeAnimal" />
-
-    <TextView
-        android:id="@+id/tvTituloCadastro"
-        android:layout_width="416dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="clip_vertical|center_horizontal"
-        android:text="Cadastro de Guia"
-        android:textColor="#3F51B5"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
-
-    <EditText
-        android:id="@+id/etTelefone"
-        android:layout_width="173dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="Telefone"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toEndOf="@+id/etDonoAnimal"
-        app:layout_constraintTop_toBottomOf="@+id/etIdadeAnimal2" />
-
-    <EditText
-        android:id="@+id/etPeso"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Peso"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etTelefone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etIdadeAnimal2"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeAnimal" />
-
-    <EditText
-        android:id="@+id/etRaca"
-        android:layout_width="173dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Raça"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDonoAnimal" />
-
-    <EditText
-        android:id="@+id/etTipoAnimal"
-        android:layout_width="177dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Tipo de animal"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/etRaca"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
-
-    <Button
-        android:id="@+id/btSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="96dp"
-        android:text="Salvar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
->>>>>>> parent of 3af957e... reajuste de layuot
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etInformacoes"
-<<<<<<< HEAD
-        android:layout_width="311dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-=======
-        android:layout_width="392dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
->>>>>>> parent of 3af957e... reajuste de layuot
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Informações sobre remédios, cirurgias e alergias"
-        android:inputType="textPersonName"
-<<<<<<< HEAD
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/btSalvar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal"
-        app:layout_constraintVertical_bias="0.666" />
->>>>>>> 1bce828019291ac339f7efd16ac2f8e93667c49f
-=======
-        app:layout_constraintBottom_toTopOf="@+id/btSalvar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTipoAnimal"
-        app:layout_constraintVertical_bias="0.215" />
->>>>>>> parent of 3af957e... reajuste de layuot
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -22,7 +22,7 @@ public class GuiaConsulta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guia_consulta);
 
-        etNomeAnimalConsulta = (EditText) findViewById(R.id.etNomeAnimalConsulta);
+        /*etNomeAnimalConsulta = (EditText) findViewById(R.id.etNomeAnimalConsulta);
         etDonoAnimalConsulta = (EditText) findViewById(R.id.etDonoAnimalConsulta);
         etIdadeAnimal2Consulta = (EditText) findViewById(R.id.etIdadeAnimal2Consulta);
         etTelefoneConsulta = (EditText) findViewById(R.id.etTelefoneConsulta);
@@ -39,6 +39,6 @@ public class GuiaConsulta extends AppCompatActivity {
                 Intent intent = new Intent(GuiaConsulta.this, EdicaoCadastro.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }
