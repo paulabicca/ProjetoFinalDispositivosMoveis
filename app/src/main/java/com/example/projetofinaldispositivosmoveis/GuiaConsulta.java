@@ -26,7 +26,7 @@ public class GuiaConsulta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guia_consulta);
 
-        /*etNomeAnimalConsulta = (EditText) findViewById(R.id.etNomeAnimalConsulta);
+        etNomeAnimalConsulta = (EditText) findViewById(R.id.etNomeAnimalConsulta);
         etDonoAnimalConsulta = (EditText) findViewById(R.id.etDonoAnimalConsulta);
         etIdadeAnimal2Consulta = (EditText) findViewById(R.id.etIdadeAnimal2Consulta);
         etTelefoneConsulta = (EditText) findViewById(R.id.etTelefoneConsulta);
@@ -34,8 +34,8 @@ public class GuiaConsulta extends AppCompatActivity {
         etRacaConsulta = (EditText) findViewById(R.id.etRacaConsulta);
         etTipoAnimalConsulta = (EditText) findViewById(R.id.etTipoAnimalConsulta);
         etInformacoesConsulta = (EditText) findViewById(R.id.etInformacoesConsulta);
-        btEditar = (Button) findViewById(R.id.btEditar);
-        btFavoritoConsulta = (ImageButton) findViewById(R.id.btFavoritoConsulta);
+        btEditar = (Button) findViewById(R.id.btnEditar);
+        btFavoritoConsulta = (ImageButton) findViewById(R.id.btnFavorito);
 
         btEditar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +43,6 @@ public class GuiaConsulta extends AppCompatActivity {
                 Intent intent = new Intent(GuiaConsulta.this, EdicaoCadastro.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }

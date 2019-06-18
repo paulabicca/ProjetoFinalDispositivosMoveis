@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Cadastro extends AppCompatActivity {
 
     private EditText etNomeAnimal, etDonoAnimal, etIdadeAnimal2, etTelefone, etPeso, etRaca, etTipoAnimal, etInformacoes;
-    private Button btnSalvar,btnEscolher;
+    private Button btnSalvar;
 
 
     private FirebaseDatabase database;
