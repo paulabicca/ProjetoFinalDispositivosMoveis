@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SwipeActivity extends AppCompatActivity {
 
     //layoutSwipe Linearlayout;
     private Button btnEscolher;
-    private String nomeAnimal;
-    private String tipoAnimal;
+    private TextView nomeAnimal;
+    private TextView tipoAnimal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +20,8 @@ public class SwipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_swipe);
 
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
-        nomeAnimal = (String) findViewById(R.id.nomeAnimal);
-        tipoAnimal = (String) findViewById(R.id.tipoAnimal);
-       // layout = LinearLayout findViewById(R.id.layout);
+        nomeAnimal = (TextView) findViewById(R.id.tvNome);
+        tipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
 
 
         btnEscolher.setOnClickListener(new View.OnClickListener() {
@@ -32,9 +32,9 @@ public class SwipeActivity extends AppCompatActivity {
             }
         });
 
-        n = nomeAnimal.lenght();
+        /*n = nomeAnimal.lenght();
         t= tipoAnimal.lenght();
-        contador=0;
+        contador=0;*/
       //  layout.setOnTouchListener( new OnSwipeTouchListener(this){
 
 
