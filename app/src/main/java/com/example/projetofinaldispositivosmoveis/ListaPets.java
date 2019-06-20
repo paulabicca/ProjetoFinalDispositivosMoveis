@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 public class ListaPets extends AppCompatActivity {
 
+
+    ListView lvListaPets
+    List<Guia> lista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
