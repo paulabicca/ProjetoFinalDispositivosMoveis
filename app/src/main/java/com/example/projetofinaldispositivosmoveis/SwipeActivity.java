@@ -20,9 +20,7 @@ public class SwipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_swipe);
 
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
-        nomeAnimal = (TextView) findViewById(R.id.tvNome);
-        tipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
-
+        List <database> listaPets;
 
         btnEscolher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,30 +28,32 @@ public class SwipeActivity extends AppCompatActivity {
                Intent intent = new Intent(SwipeActivity.this, GuiaConsulta.class);
                 startActivity(intent);
             }
+
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot,Nullable String s){
+
+                List listaPets = new listaPets();
+                listapets.setNome(dataSnapshot.child("nome").getValue(String.class));
+                List.add(listaPets);
+            }
+        }
         });
 
-        /*n = nomeAnimal.lenght();
-        t= tipoAnimal.lenght();
-        contador=0;*/
-      //  layout.setOnTouchListener( new OnSwipeTouchListener(this){
+
+       layout.setOnTouchListener( new OnSwipeTouchListener(this){
 
 
-         //public void onSwipeRight(){
-          //  super.onSwipeRight();
-          //   for (contador = 0;contador< n;contador++){
-          //       for (contador=0;contador<t;contador++)
-           //  }
-//
-      //  }
-     //    public void onSwipeLeft(){
-         //    super.onSwipeLeft();
-           //  for (contador = 0;contador< n;contador++){
-             //    for (contador=0;contador<t;contador++)
-           //  }
+         public void onSwipeRight(){
+            super.onSwipeRight();
+
+
+        }
+         public void onSwipeLeft(){
+            super.onSwipeLeft();
+
 
          }
 
 
     }
-//}
-//}
+}
+}
