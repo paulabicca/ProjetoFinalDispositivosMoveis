@@ -11,16 +11,20 @@ public class SwipeActivity extends AppCompatActivity {
 
     //layoutSwipe Linearlayout;
     private Button btnEscolher;
-    private TextView nomeAnimal;
-    private TextView tipoAnimal;
+    private TextView NomeAnimal;
+    private TextView TipoAnimal;
+    private int contador = 0;
+    private Linearlayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe);
-
+        NomeAnimal = (TextView) findViewById(R.id.tvNomeAnimal);
+        TipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
+        layout = (Linearlayout) findViewById(R.id.layout);
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
-        List <database> listaPets;
+        final List <database> listaPets;
 
         btnEscolher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,28 +36,60 @@ public class SwipeActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot,Nullable String s){
 
                 List listaPets = new listaPets();
-                listapets.setNome(dataSnapshot.child("nome").getValue(String.class));
+                listapets.setNomeAnimal(dataSnapshot.child("nome").getValue(String.class));
+                List.add(listaPets);
+                listaPets.setTipoAnimal(dataSnapshot.child("tipo").getValue(String.class));
                 List.add(listaPets);
             }
         }
-        });
+                tvNomeAnimal.setText(listaPets[contador]);
+                tvTipoAnimal.setText(listaPets[contador]);
+                layout.setOnTouchListener( new OnSwipeTouchListener(this){
 
 
-       layout.setOnTouchListener( new OnSwipeTouchListener(this){
+                    public void onSwipeRight() {
+                        super.onSwipeRight();
+                        contador ++;
+                        if (contador >= listaPets[contador].length);{
+                            contador = 0;
+                        }
+
+                        tvNomeAnimal.setText(listaPets[contador]);
+                        tvTipoAnimal.setText(listaPets[contador]);
+                    }
+
+                    public void onSwipeLeft(){
+                        super.onSwipeLeft();
+                            contador --;
+                            if (contador <0){
+                                contador = listaPets[contador].length-1;
+                            }
+                            tvNomeAnimal.setText(listaPets[contador]);
+                            tvTipoAnimal.setText(listaPets[contador]);
+                    }
+
+                    @Override
+                    public void onSwipeTop() {
+                        super.onSwipeTop();
+                    }
+
+                    @Override
+                    public void onSwipeBottom() {
+                        super.onSwipeBottom();
+                    }
 
 
-         public void onSwipeRight(){
-            super.onSwipeRight();
 
 
-        }
-         public void onSwipeLeft(){
-            super.onSwipeLeft();
 
 
-         }
 
 
-    }
+
+
+
+
+    });
+
 }
 }
