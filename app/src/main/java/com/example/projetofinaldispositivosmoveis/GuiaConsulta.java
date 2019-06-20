@@ -19,7 +19,7 @@ public class GuiaConsulta extends AppCompatActivity {
     private EditText etNomeAnimalConsulta, etDonoAnimalConsulta, etIdadeAnimal2Consulta, etTelefoneConsulta, etPesoConsulta, etRacaConsulta, etTipoAnimalConsulta, etInformacoesConsulta;
     private Button btEditar;
     private ImageButton btFavoritoConsulta;
-    List<Guia> lista;
+    private List<Guia> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,18 @@ public class GuiaConsulta extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(GuiaConsulta.this, EdicaoCadastro.class);
                 startActivity(intent);
+            }
+        });
+
+        btFavoritoConsulta.setOnClickListener(new View.OnClickListener() {
+            private Object Collection;
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GuiaConsulta.this,ListaFavoritos.class);
+                startActivity(intent);
+                Guia guia = new Guia();
+                lista.add(guia);
             }
         });
     }
