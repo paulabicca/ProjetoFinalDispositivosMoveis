@@ -64,7 +64,7 @@ public class Cadastro extends AppCompatActivity {
             reference.child("guias").push().setValue(novaguia);
             limparCampos();
             Toast.makeText(this, "Dados salvos com sucesso!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent( Cadastro.this, SwipeActivity.class);
+            Intent intent = new Intent( Cadastro.this, ListaPets.class);
             startActivity(intent);
 
         }
