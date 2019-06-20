@@ -22,7 +22,7 @@ public class SwipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_swipe);
         NomeAnimal = (TextView) findViewById(R.id.tvNomeAnimal);
         TipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
-        layoutSwipe = (Linearlayout) findViewById(R.id.IDDOCARANOXML);
+        layoutSwipe = (Linearlayout) findViewById(R.id.layoutSwipe);
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
         final List <database> listaPets;
 
