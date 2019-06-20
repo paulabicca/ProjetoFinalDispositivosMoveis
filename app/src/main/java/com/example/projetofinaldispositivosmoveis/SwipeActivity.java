@@ -1,20 +1,26 @@
 package com.example.projetofinaldispositivosmoveis;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+
+import java.util.List;
 
 public class SwipeActivity extends AppCompatActivity {
 
-    //layoutSwipe Linearlayout;
     private Button btnEscolher;
     private TextView NomeAnimal;
     private TextView TipoAnimal;
     private int contador = 0;
-    private Linearlayout layoutSwipe;
+    private LinearLayout layoutSwipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +28,9 @@ public class SwipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_swipe);
         NomeAnimal = (TextView) findViewById(R.id.tvNomeAnimal);
         TipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
-        layoutSwipe = (Linearlayout) findViewById(R.id.layoutSwipe);
+        layoutSwipe = (LinearLayout) findViewById(R.id.layoutSwipe);
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
-        final List <database> listaPets;
+        final List<database> listaPets;
 
         btnEscolher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,17 +39,18 @@ public class SwipeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot,Nullable String s){
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, Nullable String s){
 
-                List listaPets = new listaPets();
-                listapets.setNomeAnimal(dataSnapshot.child("nome").getValue(String.class));
-                List.add(listaPets);
-                listaPets.setTipoAnimal(dataSnapshot.child("tipo").getValue(String.class));
-                List.add(listaPets);
+                Guia nomeAnimal = new Guia();
+                Guia tipoAnimal = new Guia();
+                nomeAnimal.setNomeAnimal(dataSnapshot.child("nome").getValue(String.class));
+                listaPets.add(nomeAnimal);
+                tipoAnimal.setTipoAnimal(dataSnapshot.child("tipo").getValue(String.class));
+                listaPets.add(tipoAnimal);
             }
         }
-                tvNomeAnimal.setText(listaPets[contador]);
-                tvTipoAnimal.setText(listaPets[contador]);
+                NomeAnimal.setText(listaPets[contador]);
+                TipoAnimal.setText(listaPets[contador]);
                 layoutSwipe.setOnTouchListener( new OnSwipeTouchListener(this){
 
 
@@ -54,8 +61,8 @@ public class SwipeActivity extends AppCompatActivity {
                             contador = 0;
                         }
 
-                        tvNomeAnimal.setText(listaPets[contador]);
-                        tvTipoAnimal.setText(listaPets[contador]);
+                        NomeAnimal.setText(listaPets[contador]);
+                        TipoAnimal.setText(listaPets[contador]);
                     }
 
                     public void onSwipeLeft(){
@@ -64,8 +71,8 @@ public class SwipeActivity extends AppCompatActivity {
                             if (contador <0){
                                 contador = listaPets[contador].length-1;
                             }
-                            tvNomeAnimal.setText(listaPets[contador]);
-                            tvTipoAnimal.setText(listaPets[contador]);
+                            NomeAnimal.setText(listaPets[contador]);
+                            TipoAnimal.setText(listaPets[contador]);
                     }
 
                     @Override
