@@ -14,7 +14,7 @@ public class SwipeActivity extends AppCompatActivity {
     private TextView NomeAnimal;
     private TextView TipoAnimal;
     private int contador = 0;
-    private Linearlayout layout;
+    private Linearlayout layoutSwipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class SwipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_swipe);
         NomeAnimal = (TextView) findViewById(R.id.tvNomeAnimal);
         TipoAnimal = (TextView) findViewById(R.id.tvTipoAnimal);
-        layout = (Linearlayout) findViewById(R.id.layout);
+        layoutSwipe = (Linearlayout) findViewById(R.id.IDDOCARANOXML);
         btnEscolher = (Button) findViewById(R.id.btnEscolher);
         final List <database> listaPets;
 
@@ -44,7 +44,7 @@ public class SwipeActivity extends AppCompatActivity {
         }
                 tvNomeAnimal.setText(listaPets[contador]);
                 tvTipoAnimal.setText(listaPets[contador]);
-                layout.setOnTouchListener( new OnSwipeTouchListener(this){
+                layoutSwipe.setOnTouchListener( new OnSwipeTouchListener(this){
 
 
                     public void onSwipeRight() {
