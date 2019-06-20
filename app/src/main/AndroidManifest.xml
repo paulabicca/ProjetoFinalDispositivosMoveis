@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ListaPets"></activity>
         <activity android:name=".Cadastro" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.CADASTRO" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuiaConsulta"></activity>
-        <activity android:name=".SwipeActivity"></activity>
-        <activity android:name=".ListaFavoritos"></activity>
-        <activity android:name=".EdicaoCadastro"></activity>
+        <activity android:name=".GuiaConsulta" />
+        <activity android:name=".ListaFavoritos" />
+        <activity android:name=".EdicaoCadastro" />
     </application>
 
 </manifest>
