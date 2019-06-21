@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +31,7 @@ public class ListaGuias extends AppCompatActivity {
 
 
     private FirebaseDatabase database;
-    private DatabaseReference reference;
+    private DatabaseReference reference,referenceDelete;
     private Query query;
     private ChildEventListener childEventListener;
 
@@ -47,7 +48,6 @@ public class ListaGuias extends AppCompatActivity {
         childEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                //Anotacao nota = new Anotacao();
                 Guia novasguias = new Guia();
                 novasguias.setIdAnimal(dataSnapshot.getKey());
                 novasguias.setNomeAnimal(dataSnapshot.child("nomeAnimal").getValue(String.class));
@@ -101,12 +101,35 @@ public class ListaGuias extends AppCompatActivity {
         lvLista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                final Guia notaSelecionada = listaGuia.get(position);
+                final Guia guiaSelecionada = listaGuia.get(position);
+                AlertDialog.Builder alerta =
+                        new AlertDialog.Builder(ListaGuias.this);
+                alerta.setTitle("Exclusão");
+                alerta.setMessage("Deseja excluir a guia de " +
+                        guiaSelecionada.getNomeAnimal() + "?");
+                alerta.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Guia nguias = listaGuia.get(position);
+                        deletarGuia(nguias.getIdAnimal());
+                        carregarLista();
+                    }
+                });
+                alerta.setNeutralButton("Cancelar", null);
+                alerta.show();
+                return true;
+            }
+        });
+
+        lvLista.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                final Guia guiaSelecionada = listaGuia.get(position);
                 AlertDialog.Builder alerta =
                         new AlertDialog.Builder(ListaGuias.this);
                 alerta.setTitle("Edição");
                 alerta.setMessage("Deseja editar a guia de " +
-                        notaSelecionada.getNomeAnimal() + "?");
+                        guiaSelecionada.getNomeAnimal() + "?");
                 alerta.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -116,16 +139,30 @@ public class ListaGuias extends AppCompatActivity {
                 });
                 alerta.setNeutralButton("Cancelar", null);
                 alerta.show();
-                return true;
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
     }
 
+
     private void carregarLista(){
         guiaAdapter = new AdapterGuia(this, listaGuia);
         lvLista.setAdapter(guiaAdapter);
     }
+
+   private boolean deletarGuia(String id){
+       DatabaseReference dR = FirebaseDatabase.getInstance().getReference("guias").child(id);
+       dR.removeValue();
+       Toast.makeText(getApplicationContext(), "Guia deletada", Toast.LENGTH_LONG).show();
+        return true;
+
+   }
 
     @Override
     protected void onResume() {
