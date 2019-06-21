@@ -19,17 +19,15 @@ public class ListaPets extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pets);
-    }
 
-   lvListaPets = (ListView) findViewById(R.id.lvListaPets);
 
-    lvListaPets.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(ListaPets.this, GuiaConsulta.class);
-            startActivity(intent);
+        lvListaPets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListaPets.this, GuiaConsulta.class);
+                startActivity(intent);
 
-        }
-    });
+            }
+        });
     }
 }

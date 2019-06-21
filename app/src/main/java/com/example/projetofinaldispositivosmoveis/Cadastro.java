@@ -18,7 +18,6 @@ public class Cadastro extends AppCompatActivity {
     private EditText etNomeAnimal, etDonoAnimal, etIdadeAnimal2, etTelefone, etPeso, etRaca, etTipoAnimal, etInformacoes;
     private Button btnSalvar;
 
-
     private FirebaseDatabase database;
     private DatabaseReference reference;
 
@@ -64,12 +63,10 @@ public class Cadastro extends AppCompatActivity {
             reference.child("guias").push().setValue(novaguia);
             limparCampos();
             Toast.makeText(this, "Dados salvos com sucesso!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent( Cadastro.this, ListaPets.class);
+              Intent intent = new Intent(Cadastro.this, GuiaConsulta.class);
             startActivity(intent);
-
         }
     }
-
     private void limparCampos(){
         etNomeAnimal.setText("");
         etDonoAnimal.setText("");

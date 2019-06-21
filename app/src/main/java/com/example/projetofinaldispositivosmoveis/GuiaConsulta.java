@@ -35,7 +35,6 @@ public class GuiaConsulta extends AppCompatActivity {
         etTipoAnimalConsulta = (EditText) findViewById(R.id.etTipoAnimalConsulta);
         etInformacoesConsulta = (EditText) findViewById(R.id.etInformacoesConsulta);
         btEditar = (Button) findViewById(R.id.btnEditar);
-        btFavoritoConsulta = (ImageButton) findViewById(R.id.btnFavorito);
 
         btEditar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,16 +44,6 @@ public class GuiaConsulta extends AppCompatActivity {
             }
         });
 
-        btFavoritoConsulta.setOnClickListener(new View.OnClickListener() {
-            private Object Collection;
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(GuiaConsulta.this,ListaFavoritos.class);
-                startActivity(intent);
-                Guia guia = new Guia();
-                lista.add(guia);
-            }
-        });
     }
 }
