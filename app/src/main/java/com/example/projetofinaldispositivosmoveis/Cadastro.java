@@ -18,8 +18,7 @@ public class Cadastro extends AppCompatActivity {
     private EditText etNomeAnimal, etDonoAnimal, etIdadeAnimal2, etTelefone, etPeso, etRaca, etTipoAnimal, etInformacoes;
     private Button btnSalvar;
 
-    private FirebaseDatabase database;
-    private DatabaseReference reference;
+    private DatabaseReference databaseGuia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,21 +48,22 @@ public class Cadastro extends AppCompatActivity {
                 etInformacoes.length() == 0){
             Toast.makeText(this, "Você precisa preencher todos os campos!", Toast.LENGTH_LONG).show();
         }else{
-            Guia novaguia = new Guia();
-            novaguia.setNomeAnimal(etNomeAnimal.getText().toString().trim());
-            novaguia.setDonoNome(etDonoAnimal.getText().toString().trim());
-            novaguia.setIdadeAnimal(etIdadeAnimal2.getText().toString().trim());
-            novaguia.setTelefoneDono(etTelefone.getText().toString().trim());
-            novaguia.setPesoAnimal(etPeso.getText().toString().trim());
-            novaguia.setRacaAnimal(etRaca.getText().toString().trim());
-            novaguia.setTipoAnimal(etTipoAnimal.getText().toString().trim());
-            novaguia.setObservacaoAnimal(etInformacoes.getText().toString().trim());
-            database = FirebaseDatabase.getInstance();
-            reference = database.getReference();
-            reference.child("guias").push().setValue(novaguia);
+            databaseGuia = FirebaseDatabase.getInstance().getReference("guias");
+            String nomeAnimal = etNomeAnimal.getText().toString().trim();
+            String donoAnimal = etDonoAnimal.getText().toString().trim();
+            String idadeAnimal = etIdadeAnimal2.getText().toString().trim();
+            String telefoneDono = etTelefone.getText().toString().trim();
+            String pesoAnimal = etPeso.getText().toString().trim();
+            String racaAnimal = etRaca.getText().toString().trim();
+            String tipoAnimal = etTipoAnimal.getText().toString().trim();
+            String observacaoAnimal =etInformacoes.getText().toString().trim();
+            String id = databaseGuia.push().getKey();
+            Guia guia = new Guia(id,nomeAnimal,donoAnimal,idadeAnimal, telefoneDono, pesoAnimal, racaAnimal,
+                    tipoAnimal, observacaoAnimal);
+            databaseGuia.child(id).setValue(guia);
             limparCampos();
             Toast.makeText(this, "Dados salvos com sucesso!", Toast.LENGTH_SHORT).show();
-              Intent intent = new Intent(Cadastro.this, GuiaConsulta.class);
+              Intent intent = new Intent(Cadastro.this, ListaGuias.class);
             startActivity(intent);
         }
     }

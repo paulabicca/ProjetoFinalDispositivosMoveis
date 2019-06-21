@@ -1,6 +1,7 @@
 package com.example.projetofinaldispositivosmoveis;
 
 public class Guia {
+    private String idAnimal;
     private String nomeAnimal;
     private String idadeAnimal;
     private String pesoAnimal;
@@ -10,6 +11,26 @@ public class Guia {
     private String telefoneDono;
     private String donoNome;
 
+    public Guia(String idAnimal, String nomeAnimal, String idadeAnimal, String pesoAnimal, String racaAnimal,
+                String tipoAnimal, String observacaoAnimal, String telefoneDono, String donoNome) {
+        this.idAnimal = idAnimal;
+        this.nomeAnimal = nomeAnimal;
+        this.idadeAnimal = idadeAnimal;
+        this.pesoAnimal = pesoAnimal;
+        this.racaAnimal = racaAnimal;
+        this.tipoAnimal = tipoAnimal;
+        this.observacaoAnimal = observacaoAnimal;
+        this.telefoneDono = telefoneDono;
+        this.donoNome = donoNome;
+    }
+
+    public Guia() {
+
+    }
+
+    public String getIdAnimal() { return idAnimal;}
+
+    public void setIdAnimal(String idAnimal) { this.idAnimal = idAnimal; }
 
     public String getNomeAnimal() {
         return nomeAnimal;
@@ -55,9 +76,7 @@ public class Guia {
         return observacaoAnimal;
     }
 
-    public void setObservacaoAnimal(String observacaoAnimal) {
-        this.observacaoAnimal = observacaoAnimal;
-    }
+    public void setObservacaoAnimal(String observacaoAnimal) {  this.observacaoAnimal = observacaoAnimal; }
 
     public String getTelefoneDono() {
         return telefoneDono;

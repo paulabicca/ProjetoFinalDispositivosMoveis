@@ -7,7 +7,7 @@
     tools:context=".ListaGuias">
 
     <ListView
-        android:id="@+id/lvLista"
+        android:id="@+id/lvListaGuia"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
